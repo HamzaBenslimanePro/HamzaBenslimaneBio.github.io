@@ -1,0 +1,168 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-content {
+    padding: 50px 20px;
+}
+
+.header-content .cover-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.header-content h1 {
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+.header-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.header-content .cta {
+    display: inline-block;
+    background: white;
+    color: #4CAF50;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.feature {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    text-align: left;
+}
+
+.feature img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.team-member {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    text-align: left;
+}
+
+.project-repo, .project-video {
+    margin: 20px 0;
+}
+
+.project-video video {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #45a049;
+}
