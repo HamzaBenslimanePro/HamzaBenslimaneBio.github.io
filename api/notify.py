@@ -1,16 +1,13 @@
-from flask import Blueprint, jsonify
+from flask import Blueprint, request, jsonify
 from twilio.rest import Client
 
 notify_bp = Blueprint('notify', __name__)
 
 # Twilio setup
-account_sid = 'your_account_sid'
-auth_token = 'your_auth_token'
-twilio_client = Client(account_sid, auth_token)
+twilio_client = Client(app.config['TWILIO_ACCOUNT_SID'], app.config['TWILIO_AUTH_TOKEN'])
 
-@notify_bp.route('/', methods=['POST'])
-def send_notification():
-    # Logic to send SMS notification
+@notify_bp.route('/api/notify', methods=['POST'])
+def notify():
     to_number = request.json.get('to')
     message_body = request.json.get('body')
     message = twilio_client.messages.create(

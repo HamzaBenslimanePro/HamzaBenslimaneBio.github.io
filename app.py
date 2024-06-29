@@ -179,6 +179,12 @@ from models.load_model import load_model
 
 app = Flask(__name__)
 
+# Register Blueprints
+app.register_blueprint(health_data_bp)
+app.register_blueprint(predict_bp)
+app.register_blueprint(user_bp)
+app.register_blueprint(notify_bp)
+
 # MongoDB setup
 client = MongoClient('localhost', 27017)
 db = client.health_monitoring
