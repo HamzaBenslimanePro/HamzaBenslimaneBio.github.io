@@ -7,8 +7,8 @@ body {
 header {
     background: #4CAF50;
     color: white;
-    padding: 20px 0;
     text-align: center;
+    position: relative;
 }
 
 nav {
@@ -41,15 +41,24 @@ nav ul li a {
 }
 
 .header-content {
-    margin: 50px 0;
+    padding: 50px 20px;
+}
+
+.header-content .cover-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
 }
 
 .header-content h1 {
     font-size: 2.5em;
+    margin: 20px 0;
 }
 
 .header-content p {
     font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
 .header-content .cta {
@@ -59,7 +68,6 @@ nav ul li a {
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 20px;
     border-radius: 5px;
 }
 
@@ -68,14 +76,14 @@ nav ul li a {
     text-align: center;
 }
 
-.features-container, .team-container {
+.features-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 20px 0;
 }
 
-.feature, .team-member {
+.feature {
     background: #f4f4f4;
     padding: 20px;
     border-radius: 5px;
@@ -83,6 +91,40 @@ nav ul li a {
     flex: 1;
     min-width: 200px;
     max-width: 300px;
+    text-align: left;
+}
+
+.feature img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.team-member {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    text-align: left;
+}
+
+.project-repo, .project-video {
+    margin: 20px 0;
+}
+
+.project-video video {
+    width: 100%;
+    height: auto;
 }
 
 footer {
