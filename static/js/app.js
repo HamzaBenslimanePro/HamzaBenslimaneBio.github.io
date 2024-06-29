@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     fetchDataBtn.addEventListener('click', async function() {
         try {
-            const response = await fetch('/api/data'); // Adjust the endpoint based on your Flask route
+            const response = await fetch('/api/health-data'); // Updated endpoint
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
