@@ -1,26 +1,18 @@
-$(document).ready(function() {
-    // Fetch health data
-    const fetchHealthData = () => {
-        $.ajax({
-            url: '/api/health-data',
-            method: 'GET',
-            success: function(data) {
-                // Process and display data in the Dashboard
-            },
-            error: function(error) {
-                console.error('Error fetching health data', error);
+document.addEventListener('DOMContentLoaded', function() {
+    const fetchDataBtn = document.getElementById('fetchDataBtn');
+    const dataContainer = document.getElementById('dataContainer');
+
+    fetchDataBtn.addEventListener('click', async function() {
+        try {
+            const response = await fetch('/api/data'); // Adjust the endpoint based on your Flask route
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
             }
-        });
-    };
-
-    fetchHealthData();
-
-    // Example of handling navigation
-    $('a.nav-link').on('click', function(event) {
-        event.preventDefault();
-        const targetId = $(this).attr('href').substring(1);
-        $('html, body').animate({
-            scrollTop: $('#' + targetId).offset().top
-        }, 500);
+            const data = await response.json();
+            dataContainer.innerHTML = `<p>Received data from backend: ${JSON.stringify(data)}</p>`;
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            dataContainer.innerHTML = '<p>Error fetching data</p>';
+        }
     });
 });

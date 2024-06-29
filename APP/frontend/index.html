@@ -4,46 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI-Based Health Monitoring System</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include any other necessary stylesheets or scripts -->
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Health Monitoring</a>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#dashboard">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#alerts">Alerts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#history">History</a>
-                </li>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#alerts">Alerts</a></li>
+                <li><a href="#history">History</a></li>
             </ul>
-        </div>
-    </nav>
-    
-    <div class="container">
-        <div id="dashboard">
-            <h1>Dashboard</h1>
-            <!-- Dashboard Content -->
-        </div>
-        <div id="alerts">
-            <h1>Alerts</h1>
-            <!-- Alerts Content -->
-        </div>
-        <div id="history">
-            <h1>History</h1>
-            <!-- History Content -->
-        </div>
-    </div>
+        </nav>
+    </header>
+    <main>
+        <section id="intro">
+            <div class="cover-image">
+                <img src="cover.jpg" alt="Cover Image">
+            </div>
+            <h1>AI-Based Health Monitoring System</h1>
+            <p>A revolutionary system that uses AI to monitor health metrics in real-time.</p>
+            <a href="/api/data" class="button" id="fetchDataBtn">Fetch Data from Backend</a>
+            <div id="dataContainer"></div>
+        </section>
+        
+        <section id="features">
+            <h2>Key Features</h2>
+            <div class="feature">
+                <img src="feature1.jpg" alt="Feature 1">
+                <h3>Real-time Monitoring</h3>
+                <p>Continuous monitoring of health metrics with real-time updates.</p>
+            </div>
+            <div class="feature">
+                <img src="feature2.jpg" alt="Feature 2">
+                <h3>Predictive Analysis</h3>
+                <p>AI-driven predictive analysis for early health alerts.</p>
+            </div>
+            <div class="feature">
+                <img src="feature3.jpg" alt="Feature 3">
+                <h3>User Profiles</h3>
+                <p>Personalized user profiles for tailored health insights.</p>
+            </div>
+        </section>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>This project was inspired by the need for advanced health monitoring solutions in today's fast-paced world. Developed as a Portfolio Project for Holberton School, we aim to provide a seamless user experience with cutting-edge AI technologies.</p>
+            <ul>
+                <li><a href="https://linkedin.com/your-profile">LinkedIn</a></li>
+                <li><a href="https://github.com/your-username">GitHub</a></li>
+                <li><a href="https://twitter.com/your-handle">Twitter</a></li>
+            </ul>
+            <a href="https://github.com/your-repo" class="button">GitHub Repository</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 AI-Based Health Monitoring System. All rights reserved.</p>
+    </footer>
     <script src="app.js"></script>
 </body>
 </html>

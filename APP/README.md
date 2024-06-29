@@ -16,7 +16,7 @@
     cd backend
     python3 -m venv venv
     source venv/bin/activate
-    pip install Flask
+    pip install Flask pymongo tensorflow twilio
     ```
 
 ### 2. Create the Backend API
